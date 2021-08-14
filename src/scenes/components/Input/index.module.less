@@ -1,0 +1,60 @@
+.row-padding(@top : 0.6rem, @right: 1rem, @bottom: 0.6rem, @left: 1rem) {
+  padding-top: @top;
+  padding-right: @right;
+  padding-bottom: @bottom;
+  padding-left: @left;
+}
+
+.border-radius(@top-left: 4px, @top-right: 4px, @bottom-right: 4px, @bottom-left: 4px) {
+  border-top-left-radius: @top-left;
+  border-top-right-radius: @top-right;
+  border-bottom-right-radius: @bottom-right;
+  border-bottom-left-radius: @bottom-left;
+}
+
+@border: 2px solid var(--third-color);
+@transition-time: 0.25s;
+
+.InputContainer {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.Input {
+  width: 30%;
+  border: @border;
+  transition: border-color @transition-time;
+
+  .row-padding();
+  .border-radius(@top-right: 0, @bottom-right: 0);
+
+  &:focus {
+    outline: none;
+
+    border-color: var(--secondary-color);
+
+    + .InputButton {
+      color: var(--opposite-contrast-color);
+      border-color: var(--secondary-color);
+      background-color: var(--secondary-color);
+    }
+  }
+}
+
+.InputButton {
+  cursor: pointer;
+  background-color: var(--third-color);
+  transition: border-color @transition-time, background-color @transition-time,
+    color @transition-time;
+
+  border: @border;
+  .row-padding();
+  .border-radius(@top-left: 0, @bottom-left: 0);
+}

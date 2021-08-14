@@ -1,0 +1,14 @@
+{
+  "presets": [
+    "@parcel/babel-preset-env",
+    [
+      "@babel/preset-typescript",
+      {
+        "isTSX": true,
+        "allExtensions": true
+      }
+    ],
+    "solid"
+  ],
+  "plugins": ["@parcel/babel-plugin-transform-runtime"]
+}

@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "moduleResolution": "node",
+    "jsxImportSource": "solid-js",
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "paths": {
+      "~*": ["./*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}
